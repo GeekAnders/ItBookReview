@@ -30,8 +30,8 @@ this_login_ip char(16) comment '上次登录的IP',
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create unique index idx_user_email on cr_users ( email );
-create unique index idx_user_name on cr_users ( name );
+create unique index idx_user_email on ibr_users ( email );
+create unique index idx_user_name on ibr_users ( name );
 
 /*==============================================================*/
 /* Table:ibr_links 友情链接 */
