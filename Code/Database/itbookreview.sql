@@ -1,9 +1,7 @@
 /*==============================================================*/
 /* itbookreview 的数据库脚本， 存储引擎使用的是MYISAM！*/
 /*==============================================================*/
-
 set names 'utf8';
-
 use itbookreview;
 
 /*==============================================================*/
@@ -34,3 +32,4 @@ primary key (id)
 
 create unique index idx_user_email on cr_users ( email );
 create unique index idx_user_name on cr_users ( name )
+
