@@ -31,5 +31,16 @@ primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 create unique index idx_user_email on cr_users ( email );
-create unique index idx_user_name on cr_users ( name )
+create unique index idx_user_name on cr_users ( name );
 
+/*==============================================================*/
+/* Table:ibr_links 友情链接 */
+/*==============================================================*/
+create table ibr_links
+(
+id int unsigned not null auto_increment,
+sort_order smallint unsigned not null,
+title varchar(50) not null,
+url varchar(100) not null,
+primary key (id)
+)ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
