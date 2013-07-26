@@ -1,7 +1,7 @@
 package my.db;
 
 /**
- * @author Ulric
+ * @author Anders
  */
 public class DBException extends RuntimeException {
 	
