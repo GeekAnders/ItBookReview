@@ -1,0 +1,14 @@
+#set($site_title="书匣子免费图书分享社区")
+#set($site_desc="最干净的免费图书，分享图书的社区，有很多免费电子书，还可以在线阅读")
+#set($user=$session_tool.currUser())
+<script type='text/javascript'>
+var ban = 'home';$("#M_A_"+ban+"_items").show();$("#t_"+ban).addClass("current");
+$('.SDU_SubNav div').hide();$('#M_A_'+ban+'_items').show();
+$('#SDU_NavigatorMenu').hover(function(){},function(){
+	$('.SDU_SubNav div').hide();
+	$('.SDU_SubNav div#M_A_'+ban+'_items').show();
+});
+</script>
+<div id='hx_content'>
+	您要查看的页面太淘气，不知道跑到哪里去了。。。
+</div>

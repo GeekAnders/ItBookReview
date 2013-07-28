@@ -1,0 +1,40 @@
+#set($site_title="程序员成长之路 - 码农之路团队博客")
+#set($site_desc="我们提供各类技术文章，技术教程，从入门到进阶到高级，码农之路陪您一起走")
+<div class="uleft">
+<div class="book_l banner">
+各种API帮助手册下载：<a href="http://pan.baidu.com/share/link?shareid=6774&uk=1478231918" target="_blank">网盘地址</a>
+</div>
+<div class='book_l'>
+#set($page_size=10)
+#set($page = $link.param("p",1))
+<div class="SpaceList BlogList">
+    <ul>
+		#foreach($o in $blog_tool.topNews($page,$page_size))
+          <li class="Blog" id="blog_$!{o.id}">      
+		<div class="BlogTitle">
+    		<div class="title">
+            	<h2 class="BlogAccess_true BlogTop_0"><img src="/img/space/b${o.gifNo()}.gif" align="absmiddle"> <a target='_blank' href='/blog/$!{o.id}/$!{o.ident}'>$!{o.title}</a></h2>			    	
+        		<div class="outline">
+            	  <span class="catalog">分类: <a href="/blog/catalog/$!{o.catalog_id}/$!{o.blogCatalogObj.ident}">$!{o.blogCatalogObj.name}</a></span>
+            	</div>
+    		</div>		
+		</div>
+		<span class="date"><em>$date.format('dd',$!{o.ctime})</em>$date.format('yyyy-MM',$!{o.ctime})</span>
+    	    	<div class="TextContent" id="blog_content_$!{o.id}">
+    		    		$!{o.summary(500)}...
+    		    	</div>
+						<div class="bottom">
+			<a rel="nofollow" href="/user/$!{o.user_id}" target="_blank">$!{o.userObj.name}</a> 发布于 $date.whenIs($!{o.ctime})，
+						阅读($!{o.view_times}) | 评论($!{o.comment_times}) |  投票($!{o.support_times}) 
+    		<a target='_blank' href="/blog/$!{o.id}/$!{o.ident}" class="fullcontent">阅读全文...</a>
+    	</div>
+		      </li>#end
+        </ul>	
+#set($curr_uri="")
+#set($total_cnt=$blog_tool.topNewsCnt())
+#pager($curr_uri $total_cnt $page_size)    				        
+</div>	
+</div>
+</div>
+#parse("WEB-INF/layout/right.vm")
+<div class="clear"></div>

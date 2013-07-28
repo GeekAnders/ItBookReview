@@ -1,0 +1,154 @@
+html {
+	display: block;
+}
+
+body {
+	background: #fffff9;
+	font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,button,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	outline: none;
+}
+
+ul {
+	display: block;
+	list-style-type: disc;
+}
+.wrapper{
+	margin:0 auto
+	height:100%;
+}
+
+/*head div从这里开始~*/
+.header {
+	width:100%;
+	margin:0 auto;
+	padding-top: 15px;
+	background: #F5F5F5;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.top-info {
+	padding-bottom: 15px;
+}
+
+.inner,footer .inner {
+	width: 988px;
+	margin: 0 auto;
+}
+
+h1,h2,h3 {
+	color: #000;
+	font-weight: bold;
+}
+
+.logo {
+	margin-top: -5px;
+}
+
+.logo a {
+	float: left;
+	width: 81px;
+	height: 34px;
+	line-height: 11em;
+	overflow: hidden;
+	color: transparent;
+	background-image: url("../img/logo.png");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: 81px 34px;
+}
+
+/*页面最上方的搜索框*/
+#form-search {
+	margin-top: 5px;
+	float: left;
+	width: 504px;
+	height: 27px;
+	margin-left: 12px;
+	position: relative;
+}
+
+#input-query {
+	font-size: 12px;
+	padding: 6px 10px; width : 423px;
+	position: absolute;
+	border: 1px solid #0E959D;
+	width: 423px;
+}
+/*搜索按钮*/
+#btn-search {
+	font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+	-webkit-appearance: none;
+	padding: 0 15px;
+	height: 29px;
+	border: 0;
+	font-size: 15px;
+	border-radius: 2px;
+	cursor: pointer;
+	background: #0E959D;
+	opacity: 0.9;
+	color: #fff;
+	float: right;
+}
+
+#btn-search:HOVER {
+	opacity: 1;
+	background: #0E959D;
+}
+
+/*上方右侧的 登录 等等...*/
+.login-flag {
+	list-style: none;
+	float: right;
+	margin-top: 13px;
+	line-height: 1;
+}
+
+.login-flag .login {
+	float: left;
+	margin-right: 10px;
+	white-space: nowrap;
+	padding: 0 10px;
+	border-right: 1px solid #0E959D
+}
+
+.login-flag .signup {
+	float: left;
+	white-space: nowrap;
+}
+
+.login-flag a {
+	font-size: 12px;
+	text-decoration: none;
+	padding: 0;
+	color: #0E959D;
+}
+
+.login-flag a:HOVER {
+	background-color: #0E959D;
+	color: #FFF;
+}
+
+/*最下面版权说明*/
+.footer {
+	width: 988px;
+	margin: 0 auto;
+	margin-top: 10px;
+	height: 38px;
+	line-height: 38px;
+	color: #737573;
+	text-align: center;
+}
+.footer a{
+	color: #737573;
+}

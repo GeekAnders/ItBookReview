@@ -1,0 +1,291 @@
+/****index页面的css*****/
+.container-main {
+	font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+	width: 988px;
+	margin: 0 auto;
+	height: 1000px;;
+}
+
+/*左边的*/
+.container-left {
+	height: 1000px;
+	float: left;
+	width: 28%;
+}
+
+.container-left a {
+	text-decoration: none;
+}
+
+/*书籍推荐那部分*/
+.recommend-div {
+	width: 100%;
+	height: auto;
+	margin-bottom: 50px;
+}
+
+.container-left h3 {
+	font-size: 13pt;
+	font-weight: 600;
+	color: #333;
+	border-bottom: 2px solid #ddd;
+	margin: 0 50px 10px 0px;
+	padding: 10px 0px 5px 5px;
+	word-space: 1px;
+	letter-spacing: 1px;
+}
+
+.bd {
+	margin-left: 10px;
+	width: 200px;
+}
+
+.bd p {
+	font-size: 12px;
+	color: #333;
+	line-height: 20px;
+}
+
+.entrance {
+	padding: 6px 10px;
+}
+
+.recommend-btn {
+	font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+	margin-top: 10px;
+	padding: 0 10px;
+	height: 24px;
+	border: 0;
+	font-size: 15px;
+	border-radius: 2px;
+	cursor: pointer;
+	background: #0E959D;
+	opacity: 0.9;
+	color: #fff;
+	float: left;
+}
+
+/*分类那部分*/
+.category-div {
+	width: 100%;
+	height: auto;
+}
+
+.category-div ul {
+	margin-left: 14px;
+	width: 75%;
+	list-style: none;
+}
+
+.category-div ul li {
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #EEE;
+	zoom: 1;
+}
+
+.category-div ul li a:HOVER {
+	background-color: #E1E8E5;
+}
+
+.category-div ul li a {
+	color: #0E959D;
+	text-decoration: none;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	margin: 1px 0;
+	letter-spacingL: 2px;
+	word-spacing: 2px;
+	display: block;
+	font-size: 15px;
+	display: block
+}
+
+/*标签*/
+.tags-div {
+	margin-top: 10px;
+	height: auto;
+}
+.tags-list{
+	width: 90%;
+}
+.tags-list .tags {
+	list-style: none;
+}
+
+.tags li {
+	display: inline;
+}
+
+.tags a:HOVER {
+	background-color: #E1E8E5;
+}
+
+.tags a {
+	display: inline-block;
+	line-height: 1;
+	margin: 0 7px 6px 0;
+	padding: 6px 10px;
+	color: #0E959D;
+	background-color: #ebffe1;
+	word-wrap: break-word;
+	-ms-word-wrap: break-word;
+	overflow: hidden;
+}
+
+/**右侧滴**/
+.container-right {
+	float: right;
+	width: 72%;
+}
+
+.container-right a,a:hover {
+	text-decoration: none;
+}
+/*最新上架css*/
+.latest-books-div {
+	float:left;
+	width: 100%;
+	height: auto;
+}
+
+.title {
+	width: 100%;
+}
+
+.title h3 {
+	font-size: 13pt;
+	font-weight: 600;
+	color: #333;
+	border-bottom: 2px solid #ddd;
+	padding: 10px 0px 5px 5px;
+	word-space: 1px;
+	letter-spacing: 1px;
+}
+.more-links {
+	position:relative;
+	top:-20px;
+	left: 650px;
+}
+.more-links a{
+color:#0E959D;
+}
+
+.more-links a:HOVER{
+	background-color:#0E959D;
+	color: #FFF;
+}
+.show-books-div {
+	position: relative;
+}
+.slide-item {
+		display:inline;
+	width: 708px;
+		height:auto;
+}
+.slide-item li {
+	float:left;
+	width: 350px;
+	height:auto;
+	display:inline;
+margin-bottom: 13px;
+background: #fff;
+}
+.border-wrap {
+	width:340px;
+padding: 12px 0px;
+border: 1px solid #f2f2eb;
+}
+.cover {
+float: left;
+width: 110px;
+height: 164px;
+margin-right: 13px;
+}
+.cover img{
+border: 0;
+max-width: 100%;
+vertical-align: middle;
+-ms-interpolation-mode: bicubic;
+}
+
+.item .info {
+position: relative;
+color: #666;
+font-size: 12px;
+overflow: hidden;
+height: 100%;
+}
+
+.item .title {
+font-size: 15px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+.item .title a{
+color:#0E959D;	
+}
+.item .title a:HOVER{
+color:#FFF;
+background-color: #0E959D;
+}
+
+.item .author {
+color: #333;
+}
+.rec-intro {
+width:193px;	
+margin: 9px 0px;
+max-height: 56px;
+}
+
+.poster-tag {
+	margin-top:5px;
+left: 0;
+bottom: 0;
+line-height: 1;
+color: #4b4b4b;
+font-size: 13px;
+}
+.poster-tag a{
+color:#0E959D;	
+}
+.poster-tag a:HOVER{
+color:#FFF;
+background-color: #0E959D;
+}
+
+/*读者好评*/
+.good-books-div{
+	margin-top:10px;
+	width: 100%;
+	float:left;
+	height: auto;
+}
+.good-books-div li{
+	width: 132px;
+	height: auto;
+}
+.good-books-div .border-wrap {
+width: 132px;
+padding: 12px 0px;
+border: 1px solid #f2f2eb;
+}
+.good-book-info{
+	float: left;
+}
+.good-books-div .rating {
+	margin-top:5px;
+}
+
+
+.stars-small-4 {
+background-position: 0 -18px;
+}
+.stars-small-context {
+width: 70px;
+height:13px;
+background-image: url("../img/rating-stars-small.png");
+margin-bottom: 4px;
+}

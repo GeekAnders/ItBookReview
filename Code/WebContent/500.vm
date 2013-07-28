@@ -1,0 +1,3 @@
+#set($layout = "blank.vm")  
+5000000
+<pre>$request.getAttribute('error_msg')</pre>

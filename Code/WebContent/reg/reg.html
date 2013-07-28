@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>$!site_title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="robots" content="index, follow" />
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/signup.css" />
+<meta name="Keywords" content="$!site_keywords" />
+<meta name="Description" content="$!site_desc" />
+</head>
+<body>
+	<div class="wrapper">
+
+		<div class="header">
+			<div class="top-info">
+				<div class="inner">
+					<h1 class="logo" title="IT书评">
+						<a href="/"> IT 书评</a>
+					</h1>
+					<form id="form-search" action="/search" method="get">
+						<input id="input-query" type="text" name="q" maxlength="60"
+							size="22" value="" placeholder="作品名 / 书名 / 作者 "
+							autocomplete="off" /> <input id="btn-search" type="submit"
+							value="搜索" />
+					</form>
+					<ul class="login-flag">
+						<li class="login"><a href="">登录</a></li>
+						<li class="signup"><a href="">注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="signup-main">
+			<div class="signup-left">
+				<h2>我要写IT书评</h2>
+				<table cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr id="tr_email">
+							<th>电子邮箱：</th>
+							<td><input type="text" name="email" id="f_email" value=""
+								class="TEXT" style="width: 200px;" /> <span id="email_tip"></span>
+							</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td>
+								<ol
+									style="border: 1px solid #0E959D; padding: 5px; width: 450px; color: #0E959D; list-style-position: inside; line-height: 22px; list-style-type: decimal; margin: 0 0 10px 0;">
+									<li>请填写真实邮箱，用于激活您的帐号；</li>
+									<li>如果您没有收到 ItBookReview 发送的邮件，请注意查看您邮箱中的垃圾邮件；</li>
+									<li>请将来自 ItBookReview 的邮件设置成不是垃圾邮件，以便接受本站邮件；</li>
+								</ol>
+							</td>
+						</tr>
+						<tr>
+							<th>昵称：</th>
+							<td><input type="text" name="name" id="f_name"
+								maxlength="20" class="TEXT" style="width: 150px;" /> <span
+								id="name_msg">不能超过10个字</span></td>
+						</tr>
+						<tr>
+							<th>登录密码：</th>
+							<td><input type="password" name="pwd" id="f_pwd"
+								class="TEXT" style="width: 150px;" /> <span id="password_msg">至少四位</span>
+							</td>
+						</tr>
+						<tr>
+							<th>密码确认：</th>
+							<td><input type="password" name="pwd2" id="f_pwd2"
+								class="TEXT" style="width: 150px;" /></td>
+						</tr>
+						<tr id="tr_gender">
+							<th>性别：</th>
+							<td><input type="radio" name="gender" value="1"
+								id="gender_1" /><label for="gender_1">男</label>&nbsp;&nbsp;&nbsp;
+								<input type="radio" name="gender" value="2" id="gender_2" /><label
+								for="gender_2">女</label> <span class="nodisp">请选择性别</span></td>
+						</tr>
+						<tr id="tr_area">
+							<th>居住地区：</th>
+							<td><select
+								onchange="showcity(this.value, document.getElementById('userCity'));"
+								name="province" id="userProvince">
+									<option value="">--请选择省份--</option>
+									<option value="北京">北京</option>
+									<option value="上海">上海</option>
+									<option value="广东">广东</option>
+									<option value="江苏">江苏</option>
+									<option value="浙江">浙江</option>
+									<option value="重庆">重庆</option>
+									<option value="安徽">安徽</option>
+									<option value="福建">福建</option>
+									<option value="甘肃">甘肃</option>
+									<option value="广西">广西</option>
+									<option value="贵州">贵州</option>
+									<option value="海南">海南</option>
+									<option value="河北">河北</option>
+									<option value="黑龙江">黑龙江</option>
+									<option value="河南">河南</option>
+									<option value="湖北">湖北</option>
+									<option value="湖南">湖南</option>
+									<option value="江西">江西</option>
+									<option value="吉林">吉林</option>
+									<option value="辽宁">辽宁</option>
+									<option value="内蒙古">内蒙古</option>
+									<option value="宁夏">宁夏</option>
+									<option value="青海">青海</option>
+									<option value="山东">山东</option>
+									<option value="山西">山西</option>
+									<option value="陕西">陕西</option>
+									<option value="四川">四川</option>
+									<option value="天津">天津</option>
+									<option value="新疆">新疆</option>
+									<option value="西藏">西藏</option>
+									<option value="云南">云南</option>
+									<option value="香港">香港特别行政区</option>
+									<option value="澳门">澳门特别行政区</option>
+									<option value="台湾">台湾</option>
+									<option value="海外">海外</option>
+							</select> <select name="city" id="userCity"></select> <script
+									src="/js/getcity.js"></script><span class="nodisp">请选择您所在的地区</span></td>
+						</tr>
+						<tr>
+							<th>验证码：</th>
+							<td><input type="text" id="f_vcode" name="verifyCode"
+								size="6" class="TEXT" /> <span><a
+									href="javascript:_rvi()">换另外一个图</a></span></td>
+						</tr>
+						<tr>
+							<th>&nbsp;</th>
+							<td><img id="img_vcode" alt="..." src="img/check.png"
+								style="border: 2px solid #ccc;" /> <script
+									language="javascript">
+									function _rvi() {
+										document.getElementById('img_vcode').src = '/action/user/captcha?t='
+												+ Math.random(1000);
+									}
+								</script></td>
+						</tr>
+						<tr class="buttons">
+							<th>&nbsp;</th>
+							<td style="padding: 20px 0;"><input type="submit" 
+								value=" 注册新用户 " class="BUTTON SUBMIT" /> <span id="error_msg"
+								class="error_msg" style="display: none"></span> <br /> <br />
+								<span style="color: #0E959D;">ItBookReview倡导真实的品书交流环境，请注册成功后上传真实头像。</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<div class="signup-right">
+				<h3>
+					已有帐号？ <a href="/home/login">直接登录</a>
+				</h3>
+				<h3>为什么要注册？</h3>
+				<ol>
+					<li>发布最新的IT技术书籍的信息</li>
+					<li>参与IT书籍的讨论和评论</li>
+					<li>和别人分享读书的心得</li>
+					<li>随时得到IT书籍最新更新消息</li>
+					<li>认识更多IT读书爱好者</li>
+				</ol>
+				<h3>为什么总提示验证码错误？</h3>
+				<ol>
+					<li>首先请确定浏览器已经启用Cookie</li>
+					<li>实在不行，邮件给我们 itbookreview@163.com</li>
+				</ol>
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<table width="100%">
+				<tbody>
+					<tr>
+						<td align="left">© IT书评(itbookreview.com) | <a href="">关于我们</a>
+							| <a href="">广告联系</a> | <a href="" target="_blank">@新浪微博</a> | <a
+							href="" target="_blank"
+							style="color: #737573; text-decoration: none;">粤ICP备12009483号-3</a></td>
+						<td class="oscapp"><span>读书交流群：330146937 | </span>
+							站长邮箱：itbookreview@163.com</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+</body>
+</html>

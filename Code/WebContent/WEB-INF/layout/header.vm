@@ -1,0 +1,35 @@
+<header>
+	<div class="top-info">
+		<div class="inner">
+			<h1 class="logo" title="IT书评">
+				<a href="/">IT书评</a>
+			</h1>
+			<form id="frm-search" action="/search" method="get">
+				<input id="input-query" type="text" name="q" maxlength="60"
+					size="22" value="" placeholder="作品名 / 书名 / 作者 " autocomplete="off"><input
+					id="btn-search" type="submit" value="搜索">
+			</form>
+			<ul id="suggest-list" class="suggests-list" style="display: none;"></ul>
+			<ul class="entrances">
+				<!-- _performtips_ -->
+				<li class="reader-entrance"><a class="icon-device-web"
+					href="/reader">我的阅读器</a></li>
+			</ul>
+		</div>
+	</div>
+	<nav class="nav nav-store">
+		<div class="inner">
+			<ul class="items">
+				<li class="on">原创作品</li>
+				<li><a href="/ebooks/">电子图书</a></li>
+				<li><a href="/category/free/">免费</a></li>
+			</ul>
+			<ul class="items items-minor user-info">
+				<li><a class="login" data-target-dialog="login"
+					href="http://www.douban.com/accounts/login">登录</a></li>
+				<li><a class="signup" data-target-dialog="signup"
+					href="http://www.douban.com/accounts/register">注册</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>

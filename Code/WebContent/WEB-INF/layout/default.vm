@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>$!site_title</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Language" content="zh-CN"/>
+<meta name="robots" content="index, follow" />
+<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="/ItBookReview/css/main.css" />
+<meta name="Keywords" content="$!site_keywords" />
+<meta name="Description" content="$!site_desc" />
+</head>
+	<body>	
+		<div class="wrapper">
+			#parse("WEB-INF/layout/header.vm")
+			<div id='body'>
+				$screen_content
+			</div>
+			#include("WEB-INF/layout/footer.vm")
+		</div>
+	</body>
+</html>
