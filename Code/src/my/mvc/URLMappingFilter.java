@@ -103,6 +103,7 @@ public class URLMappingFilter implements Filter {
 		RequestContext rc = RequestContext.begin(this.context, request, response);
 		
 		String req_uri = rc.uri();
+		System.out.println(req_uri);
 
 		try{
 			//过滤URL前缀

@@ -1,4 +1,4 @@
-package com.itbookreview.bean;
+package com.itbook.bean;
 
 import java.sql.Timestamp;
 import java.util.Date;

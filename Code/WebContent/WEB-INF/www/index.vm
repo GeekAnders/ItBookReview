@@ -1,40 +1,328 @@
-#set($site_title="程序员成长之路 - 码农之路团队博客")
-#set($site_desc="我们提供各类技术文章，技术教程，从入门到进阶到高级，码农之路陪您一起走")
-<div class="uleft">
-<div class="book_l banner">
-各种API帮助手册下载：<a href="http://pan.baidu.com/share/link?shareid=6774&uk=1478231918" target="_blank">网盘地址</a>
-</div>
-<div class='book_l'>
-#set($page_size=10)
-#set($page = $link.param("p",1))
-<div class="SpaceList BlogList">
-    <ul>
-		#foreach($o in $blog_tool.topNews($page,$page_size))
-          <li class="Blog" id="blog_$!{o.id}">      
-		<div class="BlogTitle">
-    		<div class="title">
-            	<h2 class="BlogAccess_true BlogTop_0"><img src="/img/space/b${o.gifNo()}.gif" align="absmiddle"> <a target='_blank' href='/blog/$!{o.id}/$!{o.ident}'>$!{o.title}</a></h2>			    	
-        		<div class="outline">
-            	  <span class="catalog">分类: <a href="/blog/catalog/$!{o.catalog_id}/$!{o.blogCatalogObj.ident}">$!{o.blogCatalogObj.name}</a></span>
-            	</div>
-    		</div>		
+#set($css_file="index.css")
+#set($site_title="IT读书网 - 你的技术伴侣")
+#set($site_desc="我们提供IT类技术书籍评论，笔记等各种你想要的信息，你的读书，有我们的相伴")
+<div class="container-main">
+
+			<div class="container-left">
+
+				<div class="recommend-div">
+					<h3>我要推荐</h3>
+					<div class="bd">
+						<p>个人作者可以在豆瓣上直接发布作品。 内容领域不限，唯一要求是质量优秀。 开售后，作者可直接从作品销售中获得分成。</p>
+						<input type="submit" value="推 荐 " class="recommend-btn" />
+					</div>
+				</div>
+
+				<div class="category-div">
+					<h3>书籍分类</h3>
+					<div class="category-list">
+						<ul class="list categories-list">
+							<li><a href="">小说</a></li>
+							<li><a href="">待译作品</a></li>
+							<li><a href="">生活</a></li>
+							<li><a href="">美食</a></li>
+							<li><a href="">旅行</a></li>
+							<li><a href="">科幻</a></li>
+							<li><a href="">幻想</a></li>
+							<li><a href="">随笔</a></li>
+							<li><a href="">散文</a></li>
+							<li><a href="">文化</a></li>
+							<li><a href="">诗歌</a></li>
+							<li><a href="">短篇小说</a></li>
+							<li><a href="">长篇小说</a></li>
+							<li><a href="">翻译作品</a></li>
+							<li><a href="">杂志</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="tags-div">
+					<h3>流行标签</h3>
+					<div class="tags-list">
+						<ul class="tags">
+							<li><a href="">独家作品</a></li>
+							<li><a href="">高分作品</a></li>
+							<li><a href="">小故事</a></li>
+							<li><a href="">首发长篇</a></li>
+							<li><a href="">残酷青春物语</a></li>
+							<li><a href="">路上阅读</a></li>
+							<li><a href="">黑色幽默</a></li>
+							<li><a href="">西游记</a></li>
+							<li><a href="">插画</a></li>
+						</ul>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="container-right">
+				<div class="latest-books-div">
+					<div class="title">
+						<h3>最新上架</h3>
+						<span class="more-links"> <a
+							href="/category/all?sort=new&amp;cat=article" title="更多新上架">更多新上架</a>
+						</span>
+					</div>
+					<div class="show-books-div">
+						<ul class="slide-item">
+
+							<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1121598.jpg?v=1374202204.0"
+											alt="" />
+										</a>
+									</div>
+
+
+									<div class="info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rec-intro">“十年前的书，但仍值得看。这书让我找到了方向，打开了我的专栏写作之门。”</div>
+										<span class="poster-tag ">贡献者： <a
+											href="/ebook/1121598/?icn=index-indie-rec">AndersZhuo</a>
+										</span>
+									</div>
+
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/604368.jpg?v=1370224130.0"
+											alt="" />
+										</a>
+									</div>
+
+
+									<div class="info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rec-intro">“十年前的书，但仍值得看。这书让我找到了方向，打开了我的专栏写作之门。”</div>
+										<span class="poster-tag ">贡献者： <a
+											href="/ebook/1121598/?icn=index-indie-rec">AndersZhuo</a>
+										</span>
+									</div>
+
+								</div>
+							</li>
+
+
+
+							<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/604368.jpg?v=1370224130.0"
+											alt="" />
+										</a>
+									</div>
+
+
+									<div class="info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rec-intro">“十年前的书，但仍值得看。这书让我找到了方向，打开了我的专栏写作之门。”</div>
+										<span class="poster-tag ">贡献者： <a
+											href="/ebook/1121598/?icn=index-indie-rec">AndersZhuo</a>
+										</span>
+									</div>
+
+								</div>
+							</li>
+
+							<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/604368.jpg?v=1370224130.0"
+											alt="" />
+										</a>
+									</div>
+
+
+									<div class="info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rec-intro">“十年前的书，但仍值得看。这书让我找到了方向，打开了我的专栏写作之门。”</div>
+										<span class="poster-tag ">贡献者： <a
+											href="/ebook/1121598/?icn=index-indie-rec">AndersZhuo</a>
+										</span>
+									</div>
+
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+				<div class="good-books-div">
+					<div class="title">
+						<h3>读者好评</h3>
+						<span class="more-links"> <a
+							href="/category/all?sort=new&amp;cat=article" title="更多新上架">更多新上架</a>
+						</span>
+					</div>
+					<div class="show-books-div">
+						<ul class="slide-item">
+
+							<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1138767.jpg?v=1374038280.0"
+											alt="" />
+										</a>
+									</div>
+									<div class="info good-book-info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rating">
+											<div title="4.4"
+												class="stars-small-context"></div><span
+												class="rating-average">总分：8.8</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+								<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1138767.jpg?v=1374038280.0"
+											alt="" />
+										</a>
+									</div>
+									<div class="info good-book-info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rating">
+											<div title="4.4"
+												class="stars-small-context"></div><span
+												class="rating-average">总分：8.8</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+								<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1138767.jpg?v=1374038280.0"
+											alt="" />
+										</a>
+									</div>
+									<div class="info good-book-info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rating">
+											<div title="4.4"
+												class="stars-small-context"></div><span
+												class="rating-average">总分：8.8</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+								<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1138767.jpg?v=1374038280.0"
+											alt="" />
+										</a>
+									</div>
+									<div class="info good-book-info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rating">
+											<div title="4.4"
+												class="stars-small-context"></div><span
+												class="rating-average">总分：8.8</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+								<li class="item">
+								<div class="border-wrap">
+									<div class="cover">
+										<a href="/ebook/1121598/?icn=index-indie-rec" class="pic"
+											target="_self"> <img width="110px" height="164px"
+											src="http://img3.douban.com/view/ark_article_cover/cut/public/1138767.jpg?v=1374038280.0"
+											alt="" />
+										</a>
+									</div>
+									<div class="info good-book-info">
+										<h4 class="title">
+											<a href="/ebook/1121598/?icn=index-indie-rec">我是鸡汤</a>
+										</h4>
+										<div class="author">
+											作者： <span class="orig-author">连岳</span>
+										</div>
+										<div class="rating">
+											<div title="4.4"
+												class="stars-small-context"></div><span
+												class="rating-average">总分：8.8</span>
+										</div>
+									</div>
+								</div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+
+
+			</div>
+
+
 		</div>
-		<span class="date"><em>$date.format('dd',$!{o.ctime})</em>$date.format('yyyy-MM',$!{o.ctime})</span>
-    	    	<div class="TextContent" id="blog_content_$!{o.id}">
-    		    		$!{o.summary(500)}...
-    		    	</div>
-						<div class="bottom">
-			<a rel="nofollow" href="/user/$!{o.user_id}" target="_blank">$!{o.userObj.name}</a> 发布于 $date.whenIs($!{o.ctime})，
-						阅读($!{o.view_times}) | 评论($!{o.comment_times}) |  投票($!{o.support_times}) 
-    		<a target='_blank' href="/blog/$!{o.id}/$!{o.ident}" class="fullcontent">阅读全文...</a>
-    	</div>
-		      </li>#end
-        </ul>	
-#set($curr_uri="")
-#set($total_cnt=$blog_tool.topNewsCnt())
-#pager($curr_uri $total_cnt $page_size)    				        
-</div>	
-</div>
-</div>
-#parse("WEB-INF/layout/right.vm")
-<div class="clear"></div>

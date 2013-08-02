@@ -6,8 +6,9 @@
 <meta http-equiv="Content-Language" content="zh-CN"/>
 <meta name="robots" content="index, follow" />
 <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico" />
-<link rel="stylesheet" type="text/css" href="/ItBookReview/css/main.css" />
-<meta name="Keywords" content="$!site_keywords" />
+<link rel="stylesheet" type="text/css" href="/ItBook/css/main.css" />
+<link rel="stylesheet" type="text/css" href="/ItBook/css/$!css_file" />
+<meta name="Keywords" content="$!css_file" />
 <meta name="Description" content="$!site_desc" />
 </head>
 	<body>	

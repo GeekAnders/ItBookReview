@@ -15,7 +15,7 @@ import my.util.Inflector;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.dbutils.DbUtils;
 
-import  com.itbookreview.bean.User;
+import com.itbook.bean.User;
 
 /**
  * 数据库对象的基类

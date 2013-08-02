@@ -1,6 +1,6 @@
 package my.toolbox;
 
-import com.itbookreview.bean.User;
+import com.itbook.bean.User;
 
 import my.mvc.RequestContext;
 
