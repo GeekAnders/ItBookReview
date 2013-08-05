@@ -1,14 +1,14 @@
 /*==============================================================*/
-/* itbookreview 的数据库脚本， 存储引擎使用的是MYISAM！*/
+/* itbook 的数据库脚本， 存储引擎使用的是MYISAM！*/
 /*==============================================================*/
 set names 'utf8';
-use itbookreview;
+use itbook;
 
 /*==============================================================*/
-/* Table:ibr_users 用户表 */
+/* Table:ib_users 用户表 */
 /*==============================================================*/
-drop table if exists ibr_users;
-create table ibr_users
+drop table if exists ib_users;
+create table ib_users
 (
 id int unsigned not null auto_increment,
 email varchar(40) not null comment '用来登录的邮箱',
@@ -33,13 +33,13 @@ this_login_ip char(16) comment '上次登录的IP',
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create unique index idx_user_email on ibr_users ( email );
-create unique index idx_user_name on ibr_users ( name );
+create unique index idx_user_email on ib_users ( email );
+create unique index idx_user_name on ib_users ( name );
 /*==============================================================*/
-/* Table:ibr_book_catalogs 书籍的分类 */
+/* Table:ib_book_catalogs 书籍的分类 */
 /*==============================================================*/
-drop table if exists ibr_book_catalogs;
-create table ibr_book_catalogs
+drop table if exists ib_book_catalogs;
+create table ib_book_catalogs
 (
 id int unsigned not null auto_increment,
 name varchar(32) not null comment '分类名称',
@@ -49,10 +49,10 @@ primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*==============================================================*/
-/* Table:ibr_books IT书籍 */
+/* Table:ib_books IT书籍 */
 /*==============================================================*/
-drop table if exists ibr_books;
-create table ibr_books
+drop table if exists ib_books;
+create table ib_books
 (
 id int unsigned not null auto_increment,
 name varchar(128) not null comment '书名',
@@ -77,14 +77,14 @@ as_top tinyint(1) not null default 0,
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create index idx_book_user on ibr_books ( user_id );
-create index idx_book_catalog on ibr_books ( catalog_id );
+create index idx_book_user on ib_books ( user_id );
+create index idx_book_catalog on ib_books ( catalog_id );
 
 /*==============================================================*/
-/* Table:ibr_tags 标签 */
+/* Table:ib_tags 标签 */
 /*==============================================================*/
-drop table if exists ibr_tags;
-create table ibr_tags
+drop table if exists ib_tags;
+create table ib_tags
 (
 id int unsigned not null auto_increment,
 name varchar(32) not null,
@@ -92,13 +92,13 @@ relevant_count int unsigned not null default 0 comment '这个tag关联的book�
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create index idx_tag_name on ibr_tags ( name );
+create index idx_tag_name on ib_tags ( name );
 
 /*==============================================================*/
-/* Table:ibr_book_comments 书评 */
+/* Table:ib_book_comments 书评 */
 /*==============================================================*/
-drop table if exists ibr_book_comments;
-create table ibr_book_comments
+drop table if exists ib_book_comments;
+create table ib_book_comments
 (
 id int unsigned not null auto_increment,
 content text comment '内容',
@@ -111,13 +111,13 @@ score int not null comment '对书的评价得分',
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create index idx_b_c_bookid on ibr_book_comments ( book_id );
+create index idx_b_c_bookid on ib_book_comments ( book_id );
 
 /*==============================================================*/
-/* Table:ibr_comment_votes 对书评投票的记录，不允许多次投票 */
+/* Table:ib_comment_votes 对书评投票的记录，不允许多次投票 */
 /*==============================================================*/
-drop table if exists ibr_comment_votes;
-create table ibr_comment_votes
+drop table if exists ib_comment_votes;
+create table ib_comment_votes
 (
 id int unsigned not null auto_increment,
 vote_type tinyint not null default 0 comment '投的什么票',
@@ -126,13 +126,13 @@ user_id int unsigned not null comment '投票人',
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create index idx_c_v_user_id on ibr_comment_votes ( user_id );
+create index idx_c_v_user_id on ib_comment_votes ( user_id );
 
 /*==============================================================*/
-/* Table:ibr_book_comments 对书评的回应 */
+/* Table:ib_book_comments 对书评的回应 */
 /*==============================================================*/
-drop table if exists ibr_comment_responses;
-create table ibr_comment_responses
+drop table if exists ib_comment_responses;
+create table ib_comment_responses
 (
 id int unsigned not null auto_increment,
 content text comment '内容',
@@ -142,13 +142,13 @@ ctime timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
 primary key (id)
 )ENGINE=MYISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-create index idx_c_r_bookid on ibr_comment_responses ( book_id );
+create index idx_c_r_bookid on ib_comment_responses ( book_id );
 
 /*==============================================================*/
-/* Table:ibr_links 友情链接 */
+/* Table:ib_links 友情链接 */
 /*==============================================================*/
-drop table if exists ibr_links;
-create table ibr_links
+drop table if exists ib_links;
+create table ib_links
 (
 id int unsigned not null auto_increment,
 sort_order smallint unsigned not null,

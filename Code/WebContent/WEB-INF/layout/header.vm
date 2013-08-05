@@ -1,4 +1,4 @@
-#set($project_name="ItBook")
+
 <div class="header">
 			<div class="top-info">
 				<div class="inner">
@@ -13,7 +13,7 @@
 					</form>
 					<ul class="login-flag">
 						<li class="login"><a href="">登录</a></li>
-						<li class="signup"><a href="/$!project_name/reg">注册</a></li>
+						<li class="signup"><a href="${project_name}/reg">注册</a></li>
 					</ul>
 				</div>
 			</div>

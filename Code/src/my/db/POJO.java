@@ -86,7 +86,7 @@ public class POJO implements Serializable {
 	 */
 	protected String TableName() {
 		if (__this_table_name == null)
-			__this_table_name = "cr_"
+			__this_table_name = "ib_"
 					+ Inflector.getInstance().tableize(getClass());
 		return __this_table_name;
 	}
