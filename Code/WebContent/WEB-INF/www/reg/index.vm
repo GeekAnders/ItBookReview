@@ -251,7 +251,7 @@ $('#frm_reg').ajaxForm({
     		$('#error_msg').html(html);
     		$('#error_msg').show("fast");
     	}else{
-    		location.href="http://www.itbook.com/ItBook/reg/guide;
+    		location.href="http://www.itbook.com/ItBook/reg/guide";
     	}
     }
 });
