@@ -251,8 +251,7 @@ $('#frm_reg').ajaxForm({
     		$('#error_msg').html(html);
     		$('#error_msg').show("fast");
     	}else{
-			location.href="/";
-    		//location.href="http://www.coderroad.com/home/regok?email=" + $('#f_email').val();
+    		location.href="http://www.itbook.com/ItBook/reg/guide;
     	}
     }
 });

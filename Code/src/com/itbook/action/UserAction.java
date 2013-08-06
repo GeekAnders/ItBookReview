@@ -41,6 +41,6 @@ public class UserAction {
 		
 		ctx.saveUserInCookie(user, true);
 		//TODO 注册发邮件
-		ctx.request().setAttribute(ActionServlet.GOTO_PAGE, "/ItBook/reg/guide");
+		
 	}
 }
