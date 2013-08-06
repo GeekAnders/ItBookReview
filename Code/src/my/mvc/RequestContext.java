@@ -598,7 +598,7 @@ public class RequestContext {
 		return null;
 	}
 	
-	public final static String COOKIE_LOGIN = "shuxiazi";
+	public final static String COOKIE_LOGIN = "itbook";
 	private final static int MAX_AGE = 86400 * 365;
 	private final static byte[] E_KEY = new byte[]{'1','2','3','4','5','6','7','8'};
 	public static String getContextPath() {

@@ -5,12 +5,16 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.StringUtils;
+
 import my.db.POJO;
 import my.db.QueryHelper;
 import my.mvc.IUser;
+import my.mvc.RequestContext;
 
 public class User  extends POJO implements IUser{
 	public static final User INSTANCE = new User();
+	public static final String CURRENT_USER = "current_user";
 	
 	private String email;
 	private String name;
@@ -37,9 +41,25 @@ public class User  extends POJO implements IUser{
 	}
 
 
-	public static User GetLoginUser(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		return null;
+	public static User GetLoginUser(HttpServletRequest req) {
+		
+		Object loginUser = req.getAttribute(CURRENT_USER);
+		if (loginUser == null) {
+			// 从Cookie中解析出用户id
+			IUser cookie_user = RequestContext.get().getUserFromCookie();
+			if (cookie_user == null) {
+				return null;
+			}
+			// 即使cookie中有这个用户的pwd，我们也要校验一下正确性
+			User user = User.INSTANCE.Get(cookie_user.getId());
+			if (user != null
+					&& StringUtils.equalsIgnoreCase(user.getPwd(),
+							cookie_user.getPwd())) {
+				req.setAttribute(CURRENT_USER, user);
+				return user;
+			}
+		}
+		return (User) loginUser;
 	}
 
 

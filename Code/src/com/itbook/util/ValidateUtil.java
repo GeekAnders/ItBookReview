@@ -10,7 +10,7 @@ import org.apache.commons.lang.StringUtils;
 import com.itbook.bean.User;
 
 public class ValidateUtil {
-	public static void validateRegInfo(String email, String name, String pwd, String city, String gender, String verifyCode, HttpServletRequest req) {
+	public static void validateRegInfo(String email, String name, String pwd,String provice, String city, String gender, String verifyCode,  HttpServletRequest req) {
 		if (StringUtils.isBlank(email)) {
 			throw new ActionException("邮箱不能为空");
 		}
@@ -19,6 +19,9 @@ public class ValidateUtil {
 		}
 		if (StringUtils.isBlank(pwd)) {
 			throw new ActionException("登录密码不能为空");
+		}
+		if (StringUtils.isBlank(city) || StringUtils.isBlank(provice) ) {
+			throw new ActionException("请选择您所在地区");
 		}
 		if (!ImageCaptchaService.validate(req)) {
 			throw new ActionException("验证码填写有误");

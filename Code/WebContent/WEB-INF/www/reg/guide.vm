@@ -1,0 +1,129 @@
+#set($project_name="/ItBook")
+#set($user=$session_tool.currentUser())
+#set($css_file="guide.css")
+#set($site_title="IT读书网 - 赶快加入我们")
+#set($site_desc="我们提供各类技术文章，技术教程，从入门到进阶到高级，码农之路陪您一起走")
+<div class="guide-main">
+			<h1>$!{user.name}，从选择你的兴趣开始读书之旅吧 O(∩_∩)O~</h1>
+				<form method="post">
+					<div style="display: none;">
+						<input type="hidden" name="ck" value="GO4r"/>
+					</div>
+					<div class="interests">
+						<ul>
+							<li class="selected"><input type="checkbox" class="checkbox"
+								name="interest" value="旅行" id="sel_interest_0"/><label
+									for="sel_interest_0">旅行</label></li>
+							<li class=""><input type="checkbox" class="checkbox"
+								name="interest" value="摄影" id="sel_interest_1"/><label
+									for="sel_interest_1">摄影</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="影视" id="sel_interest_2"/><label
+									for="sel_interest_2">影视</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="音乐" id="sel_interest_3"><label
+									for="sel_interest_3">音乐</label></li>
+							<li class=""><input type="checkbox" class="checkbox"
+								name="interest" value="文学" id="sel_interest_4"><label
+									for="sel_interest_4">文学</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="游戏" id="sel_interest_5"><label
+									for="sel_interest_5">游戏</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="动漫" id="sel_interest_6"><label
+									for="sel_interest_6">动漫</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="运动" id="sel_interest_7"><label
+									for="sel_interest_7">运动</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="健康" id="sel_interest_8"><label
+									for="sel_interest_8">健康</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="美食" id="sel_interest_9"><label
+									for="sel_interest_9">美食</label></li>
+							<li class="br"></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="宠物" id="sel_interest_11"><label
+									for="sel_interest_11">宠物</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="美容" id="sel_interest_12"><label
+									for="sel_interest_12">美容</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="公益" id="sel_interest_13"><label
+									for="sel_interest_13">公益</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="淘宝" id="sel_interest_14"><label
+									for="sel_interest_14">淘宝</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="二手" id="sel_interest_15"><label
+									for="sel_interest_15">二手</label></li>
+							<li class=""><input type="checkbox" class="checkbox"
+								name="interest" value="团购" id="sel_interest_16"><label
+									for="sel_interest_16">团购</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="数码" id="sel_interest_17"><label
+									for="sel_interest_17">数码</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="设计" id="sel_interest_18"><label
+									for="sel_interest_18">设计</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="手工" id="sel_interest_19"><label
+									for="sel_interest_19">手工</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="展览" id="sel_interest_20"><label
+									for="sel_interest_20">展览</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="曲艺" id="sel_interest_21"><label
+									for="sel_interest_21">曲艺</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="纹身" id="sel_interest_22"><label
+									for="sel_interest_22">纹身</label></li>
+							<li class="br"></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="人文" id="sel_interest_24"><label
+									for="sel_interest_24">人文</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="社科" id="sel_interest_25"><label
+									for="sel_interest_25">社科</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="自然" id="sel_interest_26"><label
+									for="sel_interest_26">自然</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="建筑" id="sel_interest_27"><label
+									for="sel_interest_27">建筑</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="国学" id="sel_interest_28"><label
+									for="sel_interest_28">国学</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="语言" id="sel_interest_29"><label
+									for="sel_interest_29">语言</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="哲学" id="sel_interest_30"><label
+									for="sel_interest_30">哲学</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="软件" id="sel_interest_31"><label
+									for="sel_interest_31">软件</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="互联网" id="sel_interest_32"><label
+									for="sel_interest_32">互联网</label></li>
+							<li><input type="checkbox" class="checkbox" name="interest"
+								value="星座" id="sel_interest_33"><label
+									for="sel_interest_33">星座</label></li>
+						</ul>
+					</div>
+
+					<div class="entry">
+						<input type="submit" 
+								value=" 确定，开始我的读书之旅 " class="guide-submit" /> 
+					</div>
+					
+					<script type="text/javascript" src="$!{project_name}/js/jquery-1.7.2.min.js"></script>
+					<script type="text/javascript">
+  $('.checkbox').change(function(){
+        this.parentNode.className = this.checked ? 'selected' : '';
+  });
+</script>
+					
+				</form>
+			</div>
+		</div>

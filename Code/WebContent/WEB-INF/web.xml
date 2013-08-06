@@ -41,6 +41,10 @@
     <servlet-name>velocity</servlet-name>
     <servlet-class>my.view.VelocityServlet</servlet-class>
     <init-param>
+			<param-name>org.apache.velocity.toolbox</param-name>
+			<param-value>/WEB-INF/conf/velocity-toolbox.xml</param-value>
+	</init-param>
+    <init-param>
       <param-name>org.apache.velocity.properties</param-name>
       <param-value>/WEB-INF/conf/velocity.properties</param-value>
     </init-param>

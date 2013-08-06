@@ -217,7 +217,7 @@ $('#frm_reg').ajaxForm({
 		
 		if($('#userProvince').val().length == 0){
 			$('#error_msg').hide();
-			$('#error_msg').html("请选择你所在的城市");
+			$('#error_msg').html("请选择你所在的省份");
 			$('#error_msg').show("fast");
 			return false;
 		}

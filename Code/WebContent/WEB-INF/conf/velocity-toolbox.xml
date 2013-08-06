@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<toolbox>  
+	<tool>
+	    <key>date</key>
+	    <scope>application</scope>
+	    <class>org.apache.velocity.tools.generic.ComparisonDateTool</class>
+	    <parameter name="format" value="yyyy-MM-dd"/>
+	</tool> 
+    <tool>  
+        <key>escape</key>  
+        <scope>application</scope>  
+        <class>org.apache.velocity.tools.generic.EscapeTool</class>  
+    </tool>
+   
+    <tool>  
+        <key>session_tool</key>  
+        <scope>application</scope>  
+        <class>com.itbook.tool.SessionTool</class>  
+    </tool>   
+      
+</toolbox>

@@ -1,4 +1,4 @@
-package my.toolbox;
+package com.itbook.tool;
 
 import java.util.Collection;
 
