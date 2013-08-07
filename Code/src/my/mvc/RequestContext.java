@@ -254,7 +254,7 @@ public class RequestContext {
 	}
 	
 	public String uri(){
-		return request.getRequestURI().substring(7);
+		return request.getRequestURI();
 	}
 	
 	public String contextPath(){

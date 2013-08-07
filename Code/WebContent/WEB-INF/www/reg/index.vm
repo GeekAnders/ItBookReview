@@ -5,7 +5,7 @@
 <div class="signup-main">
 			<div class="signup-left">
 				<h2>我要写IT书评</h2>
-				<form id="frm_reg" action="${project_name}/action/user/reg" method="POST">
+				<form id="frm_reg" action="/action/user/reg" method="POST">
 				<table cellspacing="0" cellpadding="0">
 					<tbody>
 						<tr id="tr_email">
@@ -100,11 +100,11 @@
 						</tr>
 						<tr>
 							<th>&nbsp;</th>
-							<td><img id="img_vcode" alt="..." src="${project_name}/action/user/captcha"
+							<td><img id="img_vcode" alt="..." src="/action/user/captcha"
 								style="border: 2px solid #ccc;" /> <script
 									language="javascript">
 									function _rvi() {
-										document.getElementById('img_vcode').src ='${project_name}/action/user/captcha?t='
+										document.getElementById('img_vcode').src ='/action/user/captcha?t='
 												+ Math.random(1000);
 									}
 								</script></td>
@@ -147,10 +147,10 @@
 
 		</div>
 		
-<script type="text/javascript" src="$!{project_name}/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="$!{project_name}/js/jquery.form-2.67.js" charset="utf-8"></script>
-<script type="text/javascript" src="${project_name}/js/getcity.js" charset="utf-8"></script>
-<script type="text/javascript" src="${project_name}/js/sha1.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/js/jquery.form-2.67.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/getcity.js" charset="utf-8"></script>
+<script type="text/javascript" src="/js/sha1.js" charset="utf-8"></script>
 <script type="text/javascript">
 var pwd, pwd2;
 $('#frm_reg').ajaxForm({
@@ -222,7 +222,7 @@ $('#frm_reg').ajaxForm({
 			return false;
 		}
 		
-		if($('#userCity').val().length == 0){
+		if($('#userCity').val() == null || $('#userCity').val().length == 0){
 			$('#error_msg').hide();
 			$('#error_msg').html("请选择你所在的城市");
 			$('#error_msg').show("fast");
@@ -251,7 +251,7 @@ $('#frm_reg').ajaxForm({
     		$('#error_msg').html(html);
     		$('#error_msg').show("fast");
     	}else{
-    		location.href="http://www.itbook.com/ItBook/reg/guide";
+    		location.href="http://www.itbook.com/reg/guide";
     	}
     }
 });

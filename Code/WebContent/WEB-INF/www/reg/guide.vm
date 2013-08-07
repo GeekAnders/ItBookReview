@@ -1,4 +1,3 @@
-#set($project_name="/ItBook")
 #set($user=$session_tool.currentUser())
 #set($css_file="guide.css")
 #set($site_title="IT读书网 - 赶快加入我们")
@@ -12,103 +11,101 @@
 					<div class="interests">
 						<ul>
 							<li class="selected"><input type="checkbox" class="checkbox"
-								name="interest" value="旅行" id="sel_interest_0"/><label
-									for="sel_interest_0">旅行</label></li>
-							<li class=""><input type="checkbox" class="checkbox"
-								name="interest" value="摄影" id="sel_interest_1"/><label
-									for="sel_interest_1">摄影</label></li>
+								name="interest" value="算法" id="sel_interest_0"/><label
+									for="sel_interest_0">算法</label></li>
+							<li><input type="checkbox" class="checkbox"
+								name="interest" value="数据结构" id="sel_interest_1"/><label
+									for="sel_interest_1">数据结构</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="影视" id="sel_interest_2"/><label
-									for="sel_interest_2">影视</label></li>
+								value="Java" id="sel_interest_2"/><label
+									for="sel_interest_2">Java</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="音乐" id="sel_interest_3"><label
-									for="sel_interest_3">音乐</label></li>
-							<li class=""><input type="checkbox" class="checkbox"
-								name="interest" value="文学" id="sel_interest_4"><label
-									for="sel_interest_4">文学</label></li>
+								value="系统架构" id="sel_interest_3"><label
+									for="sel_interest_3">系统架构</label></li>
+							<li><input type="checkbox" class="checkbox"
+								name="interest" value="Android" id="sel_interest_4"><label
+									for="sel_interest_4">Android</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="游戏" id="sel_interest_5"><label
-									for="sel_interest_5">游戏</label></li>
+								value="IOS" id="sel_interest_5"><label
+									for="sel_interest_5">IOS</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="动漫" id="sel_interest_6"><label
-									for="sel_interest_6">动漫</label></li>
+								value="PHP" id="sel_interest_6"><label
+									for="sel_interest_6">PHP</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="运动" id="sel_interest_7"><label
-									for="sel_interest_7">运动</label></li>
+								value="ASP.NET" id="sel_interest_7"><label
+									for="sel_interest_7">ASP.NET</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="健康" id="sel_interest_8"><label
-									for="sel_interest_8">健康</label></li>
+								value="C语音" id="sel_interest_8"><label
+									for="sel_interest_8">C语音</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="美食" id="sel_interest_9"><label
-									for="sel_interest_9">美食</label></li>
-							<li class="br"></li>
+								value="C++" id="sel_interest_9"><label
+									for="sel_interest_9">C++</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="宠物" id="sel_interest_11"><label
-									for="sel_interest_11">宠物</label></li>
+								value="Linux" id="sel_interest_11"><label
+									for="sel_interest_11">Linux</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="美容" id="sel_interest_12"><label
-									for="sel_interest_12">美容</label></li>
+								value="Windows" id="sel_interest_12"><label
+									for="sel_interest_12">Windows</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="公益" id="sel_interest_13"><label
-									for="sel_interest_13">公益</label></li>
+								value="HTML5" id="sel_interest_13"><label
+									for="sel_interest_13">HTML5</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="淘宝" id="sel_interest_14"><label
-									for="sel_interest_14">淘宝</label></li>
+								value="Javascript" id="sel_interest_14"><label
+									for="sel_interest_14">Javascript</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="二手" id="sel_interest_15"><label
-									for="sel_interest_15">二手</label></li>
-							<li class=""><input type="checkbox" class="checkbox"
-								name="interest" value="团购" id="sel_interest_16"><label
-									for="sel_interest_16">团购</label></li>
+								value="CSS" id="sel_interest_15"><label
+									for="sel_interest_15">CSS</label></li>
+							<li><input type="checkbox" class="checkbox"
+								name="interest" value="网络" id="sel_interest_16"><label
+									for="sel_interest_16">网络</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="数码" id="sel_interest_17"><label
-									for="sel_interest_17">数码</label></li>
+								value="嵌入式" id="sel_interest_17"><label
+									for="sel_interest_17">嵌入式</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="设计" id="sel_interest_18"><label
-									for="sel_interest_18">设计</label></li>
+								value="人机交互" id="sel_interest_18"><label
+									for="sel_interest_18">人机交互</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="手工" id="sel_interest_19"><label
-									for="sel_interest_19">手工</label></li>
+								value="云计算" id="sel_interest_19"><label
+									for="sel_interest_19">云计算</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="展览" id="sel_interest_20"><label
-									for="sel_interest_20">展览</label></li>
+								value="计算机基础" id="sel_interest_20"><label
+									for="sel_interest_20">计算机基础</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="曲艺" id="sel_interest_21"><label
-									for="sel_interest_21">曲艺</label></li>
+								value="Mysql" id="sel_interest_21"><label
+									for="sel_interest_21">Mysql</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="纹身" id="sel_interest_22"><label
-									for="sel_interest_22">纹身</label></li>
-							<li class="br"></li>
+								value="Oracle" id="sel_interest_22"><label
+									for="sel_interest_22">Oracle</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="人文" id="sel_interest_24"><label
-									for="sel_interest_24">人文</label></li>
+								value="Sql Server" id="sel_interest_24"><label
+									for="sel_interest_24">Sql Server</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="社科" id="sel_interest_25"><label
-									for="sel_interest_25">社科</label></li>
+								value="Nosql" id="sel_interest_25"><label
+									for="sel_interest_25">Nosql</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="自然" id="sel_interest_26"><label
-									for="sel_interest_26">自然</label></li>
+								value="缓存" id="sel_interest_26"><label
+									for="sel_interest_26">缓存</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="建筑" id="sel_interest_27"><label
-									for="sel_interest_27">建筑</label></li>
+								value="分布式" id="sel_interest_27"><label
+									for="sel_interest_27">分布式</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="国学" id="sel_interest_28"><label
-									for="sel_interest_28">国学</label></li>
+								value="物联网" id="sel_interest_28"><label
+									for="sel_interest_28">物联网</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="语言" id="sel_interest_29"><label
-									for="sel_interest_29">语言</label></li>
+								value="Ruby" id="sel_interest_29"><label
+									for="sel_interest_29">Ruby</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="哲学" id="sel_interest_30"><label
-									for="sel_interest_30">哲学</label></li>
+								value="ERP" id="sel_interest_30"><label
+									for="sel_interest_30">ERP</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="软件" id="sel_interest_31"><label
-									for="sel_interest_31">软件</label></li>
+								value="Python" id="sel_interest_31"><label
+									for="sel_interest_31">Python</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="互联网" id="sel_interest_32"><label
-									for="sel_interest_32">互联网</label></li>
+								value="ActionScript" id="sel_interest_32"><label
+									for="sel_interest_32">ActionScript</label></li>
 							<li><input type="checkbox" class="checkbox" name="interest"
-								value="星座" id="sel_interest_33"><label
-									for="sel_interest_33">星座</label></li>
+								value="Perl" id="sel_interest_33"><label
+									for="sel_interest_33">Perl</label></li>
 						</ul>
 					</div>
 
@@ -117,7 +114,7 @@
 								value=" 确定，开始我的读书之旅 " class="guide-submit" /> 
 					</div>
 					
-					<script type="text/javascript" src="$!{project_name}/js/jquery-1.7.2.min.js"></script>
+					<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
 					<script type="text/javascript">
   $('.checkbox').change(function(){
         this.parentNode.className = this.checked ? 'selected' : '';

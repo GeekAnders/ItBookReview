@@ -17,7 +17,7 @@
 						<li class="signup"><a href="">退出</a></li>
 					#else
 						<li class="login"><a href="">登录</a></li>
-						<li class="signup"><a href="${project_name}/reg">注册</a></li>
+						<li class="signup"><a href="/reg">注册</a></li>
 					#end
 					</ul>
 				</div>
