@@ -4,13 +4,14 @@
 #set($site_desc="我们提供各类技术文章，技术教程，从入门到进阶到高级，码农之路陪您一起走")
 <div class="guide-main">
 			<h1>$!{user.name}，从选择你的兴趣开始读书之旅吧 O(∩_∩)O~</h1>
-				<form method="post">
+				<form method="post" action="/action/user/interest">
+					<input type="hidden" name="goto_page" value="/" />
 					<div style="display: none;">
 						<input type="hidden" name="ck" value="GO4r"/>
 					</div>
 					<div class="interests">
 						<ul>
-							<li class="selected"><input type="checkbox" class="checkbox"
+							<li><input type="checkbox" class="checkbox" selected
 								name="interest" value="算法" id="sel_interest_0"/><label
 									for="sel_interest_0">算法</label></li>
 							<li><input type="checkbox" class="checkbox"
@@ -118,6 +119,7 @@
 					<script type="text/javascript">
   $('.checkbox').change(function(){
         this.parentNode.className = this.checked ? 'selected' : '';
+        
   });
 </script>
 					
