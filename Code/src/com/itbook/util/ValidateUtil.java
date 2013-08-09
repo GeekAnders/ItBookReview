@@ -40,4 +40,13 @@ public class ValidateUtil {
 			throw new ActionException("这个昵称太火爆了，已经有人抢注了，换一个吧");
 		}
 	}
+	
+	public static void validateLoginInfo(String email, String pwd) {
+	    if (StringUtils.isBlank(email)) {
+            throw new ActionException("邮箱不能为空");
+        }
+	    if (StringUtils.isBlank(pwd)) {
+            throw new ActionException("登录密码不能为空");
+        }
+	}
 }

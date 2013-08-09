@@ -128,7 +128,7 @@
 
 			<div class="signup-right">
 				<h3>
-					已有帐号？ <a href="/home/login">直接登录</a>
+					已有帐号？ <a href="/login">直接登录</a>
 				</h3>
 				<h3>为什么要注册？</h3>
 				<ol>

@@ -1,0 +1,87 @@
+.login-main {
+    font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+    width: 988px;
+    margin: 0 auto;
+    border: 1px solid #DDDDDD;
+    height: 430px;
+}
+/*左边栏*/
+.login-left {
+    float: left;
+    width: 70%;
+}
+
+/*左边栏---header*/
+.login-left h2 {
+    font-size: 16pt;
+    font-weight: normal;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    margin: 0 50px 10px 20px;
+    padding: 10px 0px 10px 5px;
+    word-space: 1px;
+    letter-spacing: 1px;
+}
+/*左边栏---登陆信息表*/
+.login-left table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    margin-left: 15px;
+}
+
+.login-left table tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.login-left table th {
+    font-weight: lighter;
+    font-size: 11.5pt;
+    text-align: right;
+    padding: 10px;
+    color: #333;
+}
+
+.login-left table a {
+    color: #0E959D;
+    font-size: 11.5pt;
+}
+
+.login-left table td {
+    vertical-align: middle;
+}
+
+.login-left table input.TEXT {
+    height: 23px;
+    font-size: 16px;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.login-left table input.BUTTON {
+    font-family: 微软雅黑, Verdana, sans-serif, 宋体;
+    font-size: 14px;
+    padding: 0 5px;
+    height: 30px;
+    border: 0;
+    font-size: 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #0E959D;
+    color: #FFF;
+    opacity: 0.8;
+}
+
+.login-left table input.BUTTON:HOVER {
+    opacity: 1;
+}
+
+.error_msg{
+    margin-left: 40px;
+	font-size: 16px;
+	color: red;
+	font-weight: bold;
+}
