@@ -20,6 +20,13 @@
 					   <input type="password" name="pwd" id="f_pwd" class="TEXT" />
 					</td>
 				</tr>
+				<tr>
+                    <th></th>
+                    <td>
+                        <input type="checkbox" name="remember" id="f_rem" />
+                        <label for="f_rem" class="">下次自动登录</label>
+                    </td>
+                </tr>
 				<tr class="buttons">
 					<th>&nbsp;</th>
 					<td style="padding: 20px 0;">
