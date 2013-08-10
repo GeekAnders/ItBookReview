@@ -1,7 +1,6 @@
 package com.itbook.action;
 
 import java.io.IOException;
-import java.sql.Timestamp;
 
 import javax.servlet.http.HttpSession;
 
@@ -12,14 +11,11 @@ import org.apache.commons.lang.StringUtils;
 import com.itbook.bean.User;
 import com.itbook.util.ValidateUtil;
 
-import my.db.QueryHelper;
 import my.img.ImageCaptchaService;
 import my.mvc.ActionException;
-import my.mvc.ActionServlet;
 import my.mvc.IUser;
 import my.mvc.RequestContext;
 import my.util.ResourceUtils;
-import my.util.SmtpHelper;
 
 public class UserAction {
 	
@@ -57,7 +53,7 @@ public class UserAction {
         
         ValidateUtil.validateLoginInfo(email, pwd);
         
-        User user = (User) User.INSTANCE.GetUserByEmail(email);
+        User user = (User) User.INSTANCE.getUserByEmail(email);
         if ((user != null && StringUtils.equalsIgnoreCase(user.getPwd(),
                 DigestUtils.shaHex(pwd)))) {
             if (user.getStatus() == IUser.STATUS_NO) {
@@ -68,7 +64,7 @@ public class UserAction {
                 ctx.saveUserInCookie(user, true);
             }
         } else {
-            throw new ActionException("登录失败");
+            throw new ActionException("用户名或密码错误!");
         }
     }
 	

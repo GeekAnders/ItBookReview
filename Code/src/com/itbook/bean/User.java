@@ -13,6 +13,8 @@ import my.mvc.IUser;
 import my.mvc.RequestContext;
 
 public class User  extends POJO implements IUser{
+	private static final long serialVersionUID = 1L;
+	
 	public static final User INSTANCE = new User();
 	public static final String CURRENT_USER = "current_user";
 	
@@ -37,7 +39,7 @@ public class User  extends POJO implements IUser{
 
 
 
-	public static User GetLoginUser(HttpServletRequest req) {
+	public static User getLoginUser(HttpServletRequest req) {
 		
 		Object loginUser = req.getAttribute(CURRENT_USER);
 		if (loginUser == null) {
@@ -59,7 +61,7 @@ public class User  extends POJO implements IUser{
 	}
 
 
-	public Object GetUserByEmail(String email) {
+	public Object getUserByEmail(String email) {
 		String sql = "select * from " + INSTANCE.TableName() + " where email=?";
 		User user = QueryHelper.read(User.class, sql, email);
 		return user;

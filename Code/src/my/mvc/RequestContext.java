@@ -390,7 +390,7 @@ public class RequestContext {
 	 * @return
 	 */
 	public IUser user() {
-		return User.GetLoginUser(request);
+		return User.getLoginUser(request);
 	}
 	
 	/**

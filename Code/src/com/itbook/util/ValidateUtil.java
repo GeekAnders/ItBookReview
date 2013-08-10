@@ -33,7 +33,7 @@ public class ValidateUtil {
 		if (!(sex ==1 || sex ==2)) {
 			throw new ActionException("请认真滴选择性别！");
 		}
-		if (User.INSTANCE.GetUserByEmail(email) != null) {
+		if (User.INSTANCE.getUserByEmail(email) != null) {
 			throw new ActionException("这个邮箱已经注册过了");
 		}
 		if (User.INSTANCE.GetUserByName(name) != null) {

@@ -1,4 +1,3 @@
-#set($project_name="/ItBook")
 #set($css_file="login.css")
 #set($site_title="IT读书网 - 一起步进读书之旅")
 #set($site_desc="我们提供各类技术文章，技术教程，从入门到进阶到高级，码农之路陪您一起走")
