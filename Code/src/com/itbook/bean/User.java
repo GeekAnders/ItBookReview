@@ -35,10 +35,6 @@ public class User  extends POJO implements IUser{
 	private Timestamp reg_time;
 	
 
-	public String CacheRegion() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
 	public static User GetLoginUser(HttpServletRequest req) {

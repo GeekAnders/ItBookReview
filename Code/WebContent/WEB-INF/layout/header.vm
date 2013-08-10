@@ -13,8 +13,9 @@
 					</form>
 					<ul class="login-flag">
 					#if($user)
-						<li class="login"><a href="">$!{user.name}</a></li>
-						<li class="signup"><a href="/action/user/logout">退出</a></li>
+						<li class="signup"><a href="">提醒</a></li>
+						<li class="login"><a href="" title="个人主页">$!{user.name} </a></li>
+						<li class="signup"><a href="/action/user/logout">退出 </a></li>
 					#else
 						<li class="login"><a href="/login">登录</a></li>
 						<li class="signup"><a href="/reg">注册</a></li>
